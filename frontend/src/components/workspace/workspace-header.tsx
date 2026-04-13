@@ -29,20 +29,18 @@ export function WorkspaceHeader({ className }: { className?: string }) {
       >
         {state === "collapsed" ? (
           <div className="group-has-data-[collapsible=icon]/sidebar-wrapper:-translate-y flex w-full cursor-pointer items-center justify-center">
-            <div className="text-primary block pt-1 font-serif group-hover/workspace-header:hidden">
-              DF
-            </div>
+            <img src="/logo.png" alt="logo" className="block h-6 w-auto pt-1 group-hover/workspace-header:hidden" />
             <SidebarTrigger className="hidden pl-2 group-hover/workspace-header:block" />
           </div>
         ) : (
           <div className="flex items-center justify-between gap-2">
             {env.NEXT_PUBLIC_STATIC_WEBSITE_ONLY === "true" ? (
-              <Link href="/" className="text-primary ml-2 font-serif">
-                DeerFlow
+              <Link href="/" className="ml-2">
+                <img src="/logo.png" alt="logo" className="h-7 w-auto" />
               </Link>
             ) : (
-              <div className="text-primary ml-2 cursor-default font-serif">
-                DeerFlow
+              <div className="ml-2 cursor-default">
+                <img src="/logo.png" alt="logo" className="h-7 w-auto" />
               </div>
             )}
             <SidebarTrigger />
